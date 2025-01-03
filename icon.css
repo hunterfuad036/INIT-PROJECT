@@ -1,0 +1,155 @@
+/* General Sidebar Container */
+body {
+  background: radial-gradient(circle, rgba(66, 64, 110, 1), rgba(20, 16, 40, 1));
+}
+
+/* Sidebar Styling */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centering items horizontally */
+  max-width: 87px;
+  margin-left: 20px;  /* Add space on the left */
+}
+
+.sidebar-wrapper {
+  position: relative;
+  display: flex;
+  min-height: 747px;
+  width: 100%;
+  align-items: flex-start;
+  gap: 22px;
+  justify-content: space-between;
+  padding: 212px 22px;
+}
+
+.sidebar-background {
+  align-self: start;
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: start;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+}
+
+.sidebar-container {
+  background: linear-gradient(rgba(47, 40, 91, 1), rgba(32, 28, 58, 0.9), rgba(47, 40, 91, 1));
+  border-radius: 32px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  align-self: stretch;
+  display: flex;
+  min-height: 727px;
+  width: 67px;
+  margin: auto 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  flex-direction: column;
+  justify-content: center;  /* Center icons inside the sidebar */
+  padding: 10px 0;  /* Add padding for better spacing */
+}
+
+/* Navigation Items */
+.nav-items {
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;  /* Ensures the nav items fill the width of the container */
+  margin: 0;  /* Removes any unwanted margin */
+  gap: 15px; /* Adjusts spacing between icons */
+}
+
+/* Icons Styling */
+.nav-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 42px;
+  transition: transform 0.3s, filter 0.3s; /* Smooth hover effect */
+}
+
+.nav-icon:hover {
+  transform: scale(1.2); /* Enlarges the icon on hover */
+  filter: brightness(1.2); /* Increases brightness on hover */
+}
+
+.nav-icon-small,
+.nav-icon-medium,
+.nav-icon-custom,
+.nav-icon-small-square,
+.nav-icon-rectangle {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.3s, filter 0.3s;
+  margin-top: 22px;
+}
+
+.nav-icon-small:hover,
+.nav-icon-medium:hover,
+.nav-icon-custom:hover,
+.nav-icon-small-square:hover,
+.nav-icon-rectangle:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Move the sidebar closer to the edge, reduce the margin */
+  .sidebar {
+    margin-left: 10px; /* Reduced margin on smaller screens */
+  }
+
+  .sidebar-wrapper {
+    padding: 100px 10px; /* Adjust padding for mobile */
+  }
+
+  .sidebar-container {
+    width: 60px; /* Reduce sidebar width on mobile */
+  }
+
+  /* Adjust the icons for smaller screens */
+  .nav-icon {
+    width: 35px; /* Smaller icons for mobile */
+  }
+
+  /* Make the sidebar full width on mobile */
+  .sidebar-background {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  /* Optional: Adjust nav item gap on mobile */
+  .nav-items {
+    gap: 12px;
+  }
+}
+
+/* For very small screens (phones, max-width: 480px) */
+@media (max-width: 480px) {
+  /* Further adjustments to sidebar and icons */
+  .sidebar-wrapper {
+    padding: 80px 5px; /* Less padding for very small screens */
+  }
+
+  .sidebar-container {
+    width: 50px; /* Even narrower sidebar */
+  }
+
+  .nav-icon {
+    width: 30px; /* Smaller icons */
+  }
+
+  /* Optional: Hide sidebar on very small screens */
+  .sidebar-background {
+    display: none; /* Uncomment if you want to hide the sidebar */
+  }
+}
