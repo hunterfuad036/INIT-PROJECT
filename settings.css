@@ -5,7 +5,7 @@ body {
 }
 
 .settings-container {
-  border: 1px solid red;
+  
   border-radius: 0;
   display: flex;
   flex-direction: row; /* Ensures horizontal alignment */
@@ -18,7 +18,7 @@ body {
 }
 
 .header-wrapper {
-  border: 1px solid red;
+  
   display: flex;
   flex-direction: row; /* Ensures horizontal alignment */
   padding: 20px;
@@ -71,7 +71,7 @@ body {
 }
 
 
-.logo-nav { border: 1px solid blue;
+.logo-nav { 
   display: flex;
   align-items: center;
   gap: 21px;
@@ -120,7 +120,7 @@ body {
   text-decoration-thickness: 2px;
 }
 
-.settings-title { border: 1px solid blue;
+.settings-title { 
   background: linear-gradient(45deg, rgba(195, 195, 253, 1) 25%, rgba(120, 119, 198, 1) 50%, rgba(195, 195, 253, 1) 75%);
   background-size: 100% 100%;
   background-clip: text;
@@ -186,7 +186,7 @@ body {
 }
 
 
-.btn-content {border: 1px solid red;
+.btn-content {
   display: flex;
   max-width: 100%;
   width: 170px;
