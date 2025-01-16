@@ -110,7 +110,7 @@ body {
   font: 500 20px Inter, sans-serif;
   cursor: pointer;
   background: linear-gradient(45deg, rgba(195, 195, 253, 1) 25%, rgba(120, 119, 198, 1) 50%, rgba(195, 195, 253, 1) 75%);
-  background-size: 100% 100%;
+  background-size: 200%; /* Make the background larger for animation */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -118,6 +118,28 @@ body {
   text-decoration: underline;
   text-decoration-color: rgba(120, 119, 198, 1); /* Matches the gradient */
   text-decoration-thickness: 2px;
+  position: relative;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.back-link:hover {
+  background-position: 100%; /* Animate the gradient background */
+  text-decoration-color: rgba(195, 195, 253, 1); /* Change underline color */
+  transform: translateX(5px); /* Add subtle movement effect */
+}
+
+.back-link::before {
+  content: "←"; /* Add an arrow before the text */
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.back-link:hover::before {
+  opacity: 1;
+  transform: translateX(0); /* Animate the arrow to appear */
 }
 
 .settings-title { 
@@ -192,7 +214,6 @@ body {
   width: 170px;
   gap: 10px;
   text-wrap: break-word;
-
 }
 
 @media (max-width: 991px) {
@@ -298,13 +319,16 @@ body {
   margin: auto 0;
 }
 
-.logo-change-btn {text-decoration: underline;
+.logo-change-btn {
   color: rgb(135, 135, 255);
   text-align: right;
   margin-top: 13px;
   background: none;
   border: none;
   cursor: pointer;
+}
+.logo-change-btn:hover {
+  text-decoration: underline;
 }
 
 .timeline-section {
@@ -378,13 +402,15 @@ width: 100%;
 }
 
 .timeline-change-btn {
-text-decoration: underline;
   align-self: end;
   margin-top: 5px;
   background: none;
   border: none;
   cursor: pointer;
   color: inherit;
+}
+.timeline-change-btn:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 991px) {
@@ -469,7 +495,4 @@ body {
     width: auto;
   }
 }
-
-/* Additional media queries continue... */
-the homepage button and logo nav is not responsive. Please fix it
 
